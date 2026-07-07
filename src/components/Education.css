@@ -1,0 +1,200 @@
+.edu__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.edu__card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edu__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edu__icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--accent-cyan-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu__icon-wrapper--purple {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.edu__icon {
+  color: var(--accent-cyan);
+}
+
+.edu__icon--purple {
+  color: #a78bfa;
+}
+
+.edu__badge-degree {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  background: var(--accent-cyan-dim);
+  border: 1px solid var(--border-hover);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 0.5px;
+}
+
+.edu__badge-degree--purple {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+}
+
+.edu__degree {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.edu__institution {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: -8px;
+}
+
+.edu__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edu__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.edu__meta-item svg {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.edu__desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.edu__cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.edu__cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 4px;
+  padding: 10px 18px;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #a78bfa;
+  transition: var(--transition);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.edu__cert-link:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: #a78bfa;
+  color: #c4b5fd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.25);
+}
+
+
+/* Languages */
+.edu__langs-card {
+  align-self: stretch;
+}
+
+.edu__langs-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.edu__langs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu__lang {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edu__lang-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edu__lang-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.edu__lang-level {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.edu__lang-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.edu__lang-fill {
+  height: 100%;
+  background: var(--fill-color, var(--accent-cyan));
+  border-radius: 100px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .edu__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .edu__grid {
+    grid-template-columns: 1fr;
+  }
+}
