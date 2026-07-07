@@ -38,7 +38,7 @@ const projects = [
     ],
     highlights: [
       '6 roles: User, Host, CoinSeller, BusinessDev, Agency, Admin',
-      'Live video streaming via ZEGOCLOUD',
+      'Live video and audio streaming via ZEGOCLOUD',
       'Image delivery via BunnyCDN',
       'Google OAuth authentication',
       'Virtual coin economy & diamond withdrawal',
