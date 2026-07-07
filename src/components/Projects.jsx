@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { GitFork, ExternalLink, Layers } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { GitFork, ExternalLink, Layers, ChevronDown } from 'lucide-react';
 import './Projects.css';
 
 const projects = [
@@ -8,11 +9,12 @@ const projects = [
     title: 'BillBnao',
     tagline: 'Complete GST Compliance Platform',
     description:
-      'A full-featured GST compliance web application enabling businesses to file GST returns, generate E-Invoices, and create E-Way Bills. Built end-to-end as the sole backend developer, integrating government GST APIs and OTP-based authentication.',
-    tech: ['Node.js', 'Express.js', 'MongoDB', 'GST API', 'E-Invoice API', 'E-Way Bill API', 'OTP Auth', 'JWT'],
+      'A full-featured GST compliance web application enabling businesses to file GST returns, generate E-Invoices, and create E-Way Bills. Features AI-powered purchase order scanning — users can upload a photo of a purchase order and Google Gemini API automatically extracts all relevant details. Built end-to-end as the sole backend developer, integrating government GST APIs and OTP-based authentication.',
+    tech: ['Node.js', 'Express.js', 'MongoDB', 'Gemini API', 'GST API', 'E-Invoice API', 'E-Way Bill API', 'OTP Auth', 'JWT'],
     github: 'https://github.com/SgCode301/billbano',
-    live: null,
+    live: [{ label: 'Admin Dashboard', url: 'https://bill-banao-admin.vercel.app/auth' }],
     highlights: [
+      'AI-powered purchase order image extraction (Gemini API)',
       'GST return filing automation',
       'E-Invoice & E-Way Bill generation',
       'OTP-based secure login',
@@ -26,16 +28,21 @@ const projects = [
     title: 'Ulive',
     tagline: 'Live Streaming & Creator Economy Platform',
     description:
-      'A TikTok-inspired live streaming platform featuring real-time video broadcasting via ZEGOCLOUD, media delivery via BunnyCDN, virtual coin economy, agency/creator management, and Google OAuth. Handles real-time events, user roles, and complex business logic.',
+      'A TikTok-inspired live streaming platform with 6 distinct roles: User, Host, CoinSeller, BusinessDevelopment, Agency, and Admin. Admin manages the entire platform; CoinSellers sell coins to users and withdraw host diamonds; Agencies add hosts and handle monthly withdrawals; BusinessDevelopment manages agencies. Features real-time video via ZEGOCLOUD, media delivery via BunnyCDN, virtual coin economy, and Google OAuth.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'ZEGOCLOUD', 'BunnyCDN', 'Google OAuth', 'Socket.IO', 'JWT', 'Mongoose'],
     github: 'https://github.com/SgCode301/ulive',
-    live: null,
+    live: [
+      { label: 'Admin Dashboard', url: 'https://ulive-admin-dashboard.vercel.app/auth/signin' },
+      { label: 'Agency Dashboard', url: 'https://ulive-coin-agency-dashboard.vercel.app/auth/signin' },
+      { label: 'Business Dev Dashboard', url: 'https://ulive-business-developer-dashboard.vercel.app/auth/sign-in' },
+    ],
     highlights: [
+      '6 roles: User, Host, CoinSeller, BusinessDev, Agency, Admin',
       'Live video streaming via ZEGOCLOUD',
       'Media & video delivery via BunnyCDN',
       'Google OAuth authentication',
-      'Virtual coin economy system',
-      'Agency & talent management',
+      'Virtual coin economy & diamond withdrawal',
+      'Agency & host management hierarchy',
     ],
     color: '#8b5cf6',
     icon: '📺',
@@ -61,12 +68,12 @@ const projects = [
   {
     id: 'auction',
     title: 'Auction',
-    tagline: 'Multi-Vendor Live Auction System API',
+    tagline: 'Multi-Vendor Live Auction System',
     description:
-      'A robust, scalable backend API for a multi-vendor live auction platform with real-time bidding via Socket.IO, Razorpay payments, 5 distinct user roles (Bidder, Vendor, Social Partner, Marketing Partner, Admin), commission structures, a social fund pool, image processing, and automated task scheduling.',
+      'A robust, scalable full-stack auction platform with real-time bidding via Socket.IO, Razorpay payments, 5 distinct user roles (Bidder, Vendor, Social Partner, Marketing Partner, Admin), commission structures, a social fund pool, image processing, and automated task scheduling.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Razorpay', 'JWT', 'bcrypt', 'Multer', 'Sharp', 'Nodemailer', 'node-cron'],
     github: null,
-    live: null,
+    live: [{ label: 'Live Demo', url: 'https://auction-management-system-dev.vercel.app/auth/signin' }],
     highlights: [
       '5 user roles with distinct permissions',
       'Real-time live bidding via Socket.IO',
@@ -89,6 +96,83 @@ const cardVariants = {
     transition: { delay: i * 0.15, duration: 0.6, ease: [0.4, 0, 0.2, 1] },
   }),
 };
+
+function LiveLinksDropdown({ links, projectId, projectColor }) {
+  const [open, setOpen] = useState(false);
+  if (!links || links.length === 0) return null;
+
+  if (links.length === 1) {
+    return (
+      <a
+        href={links[0].url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-card__link-btn"
+        aria-label="Live Demo"
+        id={`project-${projectId}-live`}
+      >
+        <ExternalLink size={18} />
+      </a>
+    );
+  }
+
+  return (
+    <div className="live-dropdown" onMouseLeave={() => setOpen(false)}>
+      <button
+        className="project-card__link-btn live-dropdown__trigger"
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Live Demos"
+        id={`project-${projectId}-live`}
+      >
+        <ExternalLink size={18} />
+        <ChevronDown size={12} style={{ marginLeft: 2, transition: 'transform 0.2s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="live-dropdown__menu"
+            initial={{ opacity: 0, y: -6, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -6, scale: 0.97 }}
+            transition={{ duration: 0.18 }}
+          >
+            {links.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="live-dropdown__item"
+              >
+                <ExternalLink size={12} />
+                {link.label}
+              </a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function LiveCTALinks({ links }) {
+  if (!links || links.length === 0) return null;
+  return (
+    <>
+      {links.map((link) => (
+        <a
+          key={link.url}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-card__cta project-card__cta--live"
+        >
+          {link.label} <ExternalLink size={14} />
+        </a>
+      ))}
+    </>
+  );
+}
 
 export default function Projects() {
   return (
@@ -134,17 +218,11 @@ export default function Projects() {
                       <GitFork size={18} />
                     </a>
                   )}
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-card__link-btn"
-                      aria-label={`${project.title} Live Demo`}
-                    >
-                      <ExternalLink size={18} />
-                    </a>
-                  )}
+                  <LiveLinksDropdown
+                    links={project.live}
+                    projectId={project.id}
+                    projectColor={project.color}
+                  />
                 </div>
               </div>
 
@@ -176,16 +254,19 @@ export default function Projects() {
                   <Layers size={14} />
                   Solo Project
                 </span>
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-card__cta"
-                  >
-                    View on GitHub <GitFork size={14} />
-                  </a>
-                )}
+                <div className="project-card__footer-links">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-card__cta"
+                    >
+                      GitHub <GitFork size={14} />
+                    </a>
+                  )}
+                  <LiveCTALinks links={project.live} />
+                </div>
               </div>
             </motion.article>
           ))}
