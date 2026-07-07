@@ -142,6 +142,21 @@ export default function Hero() {
               <Mail size={20} />
             </a>
           </motion.div>
+
+          {/* Stats strip */}
+          <motion.div
+            className="hero__stats"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.05, duration: 0.6 }}
+          >
+            {stats.map((stat, i) => (
+              <div key={i} className="hero__stat-item">
+                <span className="hero__stat-item-value">{stat.value}</span>
+                <span className="hero__stat-item-label">{stat.label}</span>
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Floating code card */}
