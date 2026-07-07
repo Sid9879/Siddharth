@@ -55,7 +55,7 @@ const projects = [
       'An enterprise-grade production management system for manufacturing operations. Admins can manage stock levels, track orders, control inventory, and oversee the entire production pipeline from raw materials to finished goods.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'REST APIs', 'MVC Architecture'],
     github: 'https://github.com/SgCode301/np-api',
-    live: null,
+    live: [{ label: 'Live Demo', url: 'https://national-product-dashboard.vercel.app/auth/signin' }],
     highlights: [
       'Stock & inventory tracking',
       'Order lifecycle management',
