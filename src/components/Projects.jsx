@@ -83,7 +83,7 @@ const projects = [
       'Automated scheduling with node-cron',
     ],
     color: '#f59e0b',
-    icon: '🔨',
+    icon: '🏷️',
     featured: true,
   },
 ];
