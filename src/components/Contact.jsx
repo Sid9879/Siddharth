@@ -13,7 +13,8 @@ const contactInfo = [
   { icon: <GithubIcon size={20} />, label: 'GitHub', value: 'github.com/Sid9879', href: 'https://github.com/Sid9879' },
 ];
 
-const BACKEND_URL = 'https://siddharth-backend-s10m.onrender.com/api/contact';
+// const BACKEND_URL = 'https://siddharth-backend-s10m.onrender.com/api/contact';
+const BACKEND_URL = 'https://siddharthbackend-production.up.railway.app/api/contact';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
