@@ -5,7 +5,7 @@ import './About.css';
 const stats = [
   { icon: <Briefcase size={22} />, value: '2000+', label: 'REST APIs Developed' },
   { icon: <User size={22} />, value: '50+', label: 'Third-Party Integrations' },
-  { icon: <GraduationCap size={22} />, value: '1 Year', label: 'Work Experience' },
+  { icon: <GraduationCap size={22} />, value: '1+ Years', label: 'Work Experience' },
   { icon: <MapPin size={22} />, value: 'Delhi', label: 'India' },
 ];
 
@@ -51,7 +51,7 @@ export default function About() {
             <p className="about__text-role gradient-text">Jr. Backend Engineer</p>
 
             <p className="about__bio">
-              I'm a backend developer with <strong>1 year of professional experience</strong> at
+              I'm a backend developer with <strong>1+ years of professional experience</strong> at
               SGWeb App Technologies, where I singlehandedly built and maintained entire backend
               systems for multiple production-grade client projects.
             </p>

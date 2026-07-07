@@ -9,8 +9,8 @@ import './Hero.css';
 const stats = [
   { value: '2000+', label: 'REST APIs Built' },
   { value: '50+', label: 'Third-Party Integrations' },
-  { value: '1 Year', label: 'Professional Experience' },
-  { value: '3+', label: 'Production Projects' },
+  { value: '1+ Years', label: 'Professional Experience' },
+  { value: '14+', label: 'Production Projects' },
 ];
 
 export default function Hero() {
@@ -81,7 +81,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Junior Backend Engineer with <strong>1 year</strong> of professional experience building
+            Junior Backend Engineer with <strong>1+ years</strong> of professional experience building
             scalable REST APIs, real-time systems, and robust authentication with
             Node.js, Express.js, MongoDB & Socket.IO.
           </motion.p>
