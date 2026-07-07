@@ -72,7 +72,7 @@ const projects = [
     description:
       'A robust, scalable full-stack auction platform with real-time bidding via Socket.IO, Razorpay payments, 5 distinct user roles (Bidder, Vendor, Social Partner, Marketing Partner, Admin), commission structures, a social fund pool, image processing, and automated task scheduling.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Razorpay', 'JWT', 'bcrypt', 'Multer', 'Sharp', 'Nodemailer', 'node-cron'],
-    github: null,
+    github: 'https://github.com/SgCode301/auction-api',
     live: [{ label: 'Live Demo', url: 'https://auction-management-system-dev.vercel.app/auth/signin' }],
     highlights: [
       '5 user roles with distinct permissions',
