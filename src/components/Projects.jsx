@@ -28,7 +28,7 @@ const projects = [
     title: 'Ulive',
     tagline: 'Live Streaming & Creator Economy Platform',
     description:
-      'A TikTok-inspired live streaming platform with 6 distinct roles: User, Host, CoinSeller, BusinessDevelopment, Agency, and Admin. Admin manages the entire platform; CoinSellers sell coins to users and withdraw host diamonds; Agencies add hosts and handle monthly withdrawals; BusinessDevelopment manages agencies. Features real-time video via ZEGOCLOUD, media delivery via BunnyCDN, virtual coin economy, and Google OAuth.',
+      'A TikTok-inspired live streaming platform with 6 distinct roles: User, Host, CoinSeller, BusinessDevelopment, Agency, and Admin. Admin manages the entire platform; CoinSellers sell coins to users and withdraw host diamonds; Agencies add hosts and handle monthly withdrawals; BusinessDevelopment manages agencies. Features real-time live audio/video streaming via ZEGOCLOUD, image delivery via BunnyCDN, virtual coin economy, and Google OAuth.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'ZEGOCLOUD', 'BunnyCDN', 'Google OAuth', 'Socket.IO', 'JWT', 'Mongoose'],
     github: 'https://github.com/SgCode301/ulive',
     live: [
@@ -39,7 +39,7 @@ const projects = [
     highlights: [
       '6 roles: User, Host, CoinSeller, BusinessDev, Agency, Admin',
       'Live video streaming via ZEGOCLOUD',
-      'Media & video delivery via BunnyCDN',
+      'Image delivery via BunnyCDN',
       'Google OAuth authentication',
       'Virtual coin economy & diamond withdrawal',
       'Agency & host management hierarchy',
