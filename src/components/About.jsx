@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { User, MapPin, Briefcase, GraduationCap } from 'lucide-react';
+import { User, MapPin, Briefcase, GraduationCap, FolderOpen } from 'lucide-react';
 import './About.css';
 
 const stats = [
   { icon: <Briefcase size={22} />, value: '2000+', label: 'REST APIs Developed' },
   { icon: <User size={22} />, value: '50+', label: 'Third-Party Integrations' },
   { icon: <GraduationCap size={22} />, value: '1+ Years', label: 'Work Experience' },
-  { icon: <MapPin size={22} />, value: 'Delhi', label: 'India' },
+  { icon: <FolderOpen size={22} />, value: '14+', label: 'Projects Delivered' },
 ];
 
 const fadeInUp = {
