@@ -30,7 +30,7 @@ const projects = [
     description:
       'A TikTok-inspired live streaming platform with 6 distinct roles: User, Host, CoinSeller, BusinessDevelopment, Agency, and Admin. Admin manages the entire platform; CoinSellers sell coins to users and withdraw host diamonds; Agencies add hosts and handle monthly withdrawals; BusinessDevelopment manages agencies. Features real-time live audio/video streaming via ZEGOCLOUD, image delivery via BunnyCDN, virtual coin economy, and Google OAuth.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'ZEGOCLOUD', 'BunnyCDN', 'Google OAuth', 'Socket.IO', 'JWT', 'Mongoose'],
-    github: 'https://github.com/SgCode301/ulive',
+    github: 'https://github.com/Sid9879/Ulive.git',
     live: [
       { label: 'Admin Dashboard', url: 'https://ulive-admin-dashboard.vercel.app/auth/signin' },
       { label: 'Agency Dashboard', url: 'https://ulive-coin-agency-dashboard.vercel.app/auth/signin' },
@@ -72,7 +72,7 @@ const projects = [
     description:
       'A robust, scalable full-stack auction platform with real-time bidding via Socket.IO, Razorpay payments, 5 distinct user roles (Bidder, Vendor, Social Partner, Marketing Partner, Admin), commission structures, a social fund pool, image processing, and automated task scheduling.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Razorpay', 'JWT', 'bcrypt', 'Multer', 'Sharp', 'Nodemailer', 'node-cron'],
-    github: 'https://github.com/SgCode301/auction-api',
+    github: 'https://github.com/Sid9879/Auction',
     live: [{ label: 'Live Demo', url: 'https://auction-management-system-dev.vercel.app/auth/signin' }],
     highlights: [
       '5 user roles with distinct permissions',
