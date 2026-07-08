@@ -11,7 +11,7 @@ const projects = [
     description:
       'A full-featured GST compliance web application enabling businesses to file GST returns, generate E-Invoices, and create E-Way Bills. Features AI-powered purchase order scanning — users can upload a photo of a purchase order and Google Gemini API automatically extracts all relevant details. Built end-to-end as the sole backend developer, integrating government GST APIs and OTP-based authentication.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'Gemini API', 'GST API', 'E-Invoice API', 'E-Way Bill API', 'OTP Auth', 'JWT'],
-    github: 'https://github.com/SgCode301/billbano',
+    github: 'https://github.com/Sid9879/BillBanao',
     live: [{ label: 'Admin Dashboard', url: 'https://bill-banao-admin.vercel.app/auth' }],
     highlights: [
       'AI-powered purchase order image extraction (Gemini API)',
