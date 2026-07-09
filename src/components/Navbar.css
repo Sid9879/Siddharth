@@ -126,3 +126,29 @@
     display: block;
   }
 }
+
+@media (max-width: 380px) {
+  .navbar__inner {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .navbar__logo {
+    font-size: 16px;
+  }
+
+  .navbar__hamburger {
+    display: block;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .navbar__mobile {
+    padding: 12px 16px 16px;
+  }
+
+  .navbar__mobile-link {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}

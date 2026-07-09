@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, Download } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [
@@ -53,6 +53,16 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
+          href="/Siddharth Singh — Backend Engineer Resume.pdf"
+          download
+          className="navbar__cta btn-outline"
+          id="nav-resume-btn"
+          style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+        >
+          <Download size={15} />
+          Resume
+        </a>
+        <a
           href="mailto:singhsiddharth1438@gmail.com"
           className="navbar__cta btn-primary"
           id="nav-hire-btn"
@@ -87,6 +97,16 @@ export default function Navbar() {
             {link.label}
           </Link>
         ))}
+        <a
+          href="/Siddharth Singh — Backend Engineer Resume.pdf"
+          download
+          className="btn-outline"
+          style={{ marginTop: '8px', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '6px' }}
+          id="nav-mobile-resume-btn"
+        >
+          <Download size={15} />
+          Download Resume
+        </a>
         <a
           href="mailto:singhsiddharth1438@gmail.com"
           className="btn-primary"
